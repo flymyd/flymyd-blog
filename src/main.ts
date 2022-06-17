@@ -4,6 +4,8 @@ import router from './router'
 import { createPinia } from 'pinia'
 import '@purge-icons/generated';
 import FIcon from '@/components/FIcon';
+import 'uno.css'
+import '@unocss/reset/tailwind.css'
 const pinia = createPinia()
 
 createApp(App)

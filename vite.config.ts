@@ -4,6 +4,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 import PurgeIcons from 'vite-plugin-purge-icons';
 import vueJsx from '@vitejs/plugin-vue-jsx'
+import Unocss from '@unocss/vite'
+import presetWind from '@unocss/preset-wind'
 const path = require('path');
 
 export default defineConfig({
@@ -42,5 +44,10 @@ export default defineConfig({
       imports: ['vue']
     }),
     PurgeIcons({ content: ['**/*.html', '**/*.ts', '**/*.js', '**/*.vue'] }),
+    Unocss({
+      presets: [
+        presetWind(),
+      ]
+    }),
   ]
 })
